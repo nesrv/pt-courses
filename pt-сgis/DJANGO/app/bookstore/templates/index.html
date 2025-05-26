@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore {{ header }}</title>
+</head>
+<body>
+
+<h2> Наш книжный магазин </h2>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit'> Добавить книгу в БД </button>
+</form>
+
+{{ books }}
+
+
+
+</body>
+</html>

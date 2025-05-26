@@ -1,0 +1,3 @@
+model: "Volkswagen ID.4"
+color: "Розовый,"
+number: ",П111УУ77"

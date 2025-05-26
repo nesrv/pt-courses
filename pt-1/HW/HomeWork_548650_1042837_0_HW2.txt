@@ -1,0 +1,34 @@
+2 Точка в круге
+
+x = int(input("Введите координату x: "))
+y = int(input("Введите координату y: "))
+xr = int(input("Введите координату центра круга xr: "))
+yr = int(input("Введите координату центра круга yr: "))
+R = int(input("Радиус круга R: "))
+print("Да" if (x - xr) ** 2 + (y - yr) ** 2 <= R ** 2 else "Нет")
+
+3 Практическое задание
+
+m, n=map(int,input().split())    
+days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]    
+if m == 12 and n == 31:
+    print("12.30 01.01") #костыль
+else:
+    if 1<=m<13:            
+        if 1<n<days[m-1]:  
+            n_1=n-1        
+            m_1=m          
+            n_2=n + 1      
+            m_2=m          
+        elif n==1:         
+            n_1=days[m-1-1]     
+            m_1=m-1        
+            n_2=n+1        
+            m_2=m          
+        elif n==days[m-1]:
+            n_1=n-1        
+            m_1=m          
+            n_2=1       
+            m_2=m+1      
+    print(f"{str(m_1).rjust(2,'0')}.{str(n_1).rjust(2,'0')} {str(m_2).rjust(2,'0')}.{str(n_2).rjust(2,'0')}")
+
